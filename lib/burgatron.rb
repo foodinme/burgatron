@@ -1,5 +1,9 @@
 require "burgatron/version"
 
 module Burgatron
-  # Your code goes here...
+  
 end
+
+require 'burgatron/client'
+require 'burgatron/destination'
+require 'burgatron/sources/yelp'
