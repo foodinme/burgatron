@@ -14,7 +14,6 @@ describe Burgatron::Sources::Yelp do
                        latitude:  45.504620,
                        longitude: -122.654206)
       destinations.first.name.should == "Ford Food and Drink" # since the lat/lng are right on top of it
-      binding.pry
     end
   end
 end

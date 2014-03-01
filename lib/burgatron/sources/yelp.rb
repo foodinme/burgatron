@@ -1,6 +1,5 @@
 require 'yelpster'
 require 'burgatron/destination'
-require 'pry'
 
 module Burgatron
   
