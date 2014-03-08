@@ -32,7 +32,10 @@ module Burgatron
       def destination(result)
         Burgatron::Destination.new.tap do |dest|
           dest.name       = result["name"]
-          dest.location   = result["location"]
+          loc = result["location"]
+          dest.location   = loc.merge(
+            geo_address:  loc["address"].first + ", " + loc["postal_code"]
+          )
           dest.categories = result["categories"].map(&:last)
           dest.source     = "yelp"
           dest.source_details = {
