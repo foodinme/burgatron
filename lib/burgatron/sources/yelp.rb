@@ -36,7 +36,7 @@ module Burgatron
           dest.location   = loc.merge(
             geo_address:  loc["address"].first + ", " + loc["postal_code"]
           )
-          dest.categories = result["categories"].map(&:last)
+          dest.categories = Burgatron::Categories.expand_all *result["categories"].map(&:last)
           dest.source     = "yelp"
           dest.source_details = {
             "url"          => result["mobile_url"],
