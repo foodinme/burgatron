@@ -6,6 +6,16 @@ module Burgatron
   module Sources
   
     class Foursquare
+      
+      CategoryMapping = {
+        "Café"               => :cafe,
+        "Coffee Shop"        => :coffee,
+        "Diner"              => :diners,
+        "Grocery Store"      => :grocery,
+        "Latin American"     => :latin,
+        "Vegetarian / Vegan" => :vegetarian,
+      }
+      CategoryMapping.default_proc = ->(h,k) { k.to_s.downcase.to_sym }
 
       def initialize(keyw)
         @config = keyw.fetch(:foursquare_config)
@@ -37,7 +47,7 @@ module Burgatron
             geo_address:  "#{loc["address"]}, #{loc["postalCode"]}",
             geo_location: "#{loc["lat"]},#{loc["lng"]}"
           )
-          dest.categories = result["categories"].map{|cat| cat["shortName"] }
+          dest.categories = Burgatron::Categories.expand_all *result["categories"].map{|cat| CategoryMapping[cat["shortName"]] }
           dest.source     = "foursquare"
           dest.source_details = {}
         end
