@@ -11,10 +11,18 @@ YELP_CONFIG = {
   token_secret:    ENV['YELP_TOKEN_SECRET'],
 }
 
+FOURSQUARE_CONFIG = {
+  client_id:      ENV["FOURSQUARE_CLIENT_ID"],
+  client_secret:  ENV["FOURSQUARE_CLIENT_SECRET"],
+}
+
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr'
   c.hook_into :webmock
   YELP_CONFIG.each do |key, val|
     c.filter_sensitive_data("<#{key}>".upcase) { val }
+  end
+  FOURSQUARE_CONFIG.each do |key, val|
+    c.filter_sensitive_data("#{key}".upcase) { val }
   end
 end

@@ -32,6 +32,7 @@ describe Burgatron::Client do
       [ 
         Burgatron::Destination.new("Tofu Zone"),
         Burgatron::Destination.new("Le Canard Chanceaux"),
+        Burgatron::Destination.new("Taco Hut")
       ]
     )
     subject.add_source source2
