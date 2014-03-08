@@ -7,6 +7,9 @@ module Burgatron
   Categories = {
     :restaurant    => [],
       :asian       => [:restaurant],
+        :chinese   => [:asian],
+        :japanese  => [:asian],
+          :sushi   => [:japanese],
       :mexican     => [:restaurant],
         :taqueria  => [:mexican],
       :latin       => [:restaurant],
