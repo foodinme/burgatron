@@ -34,7 +34,8 @@ module Burgatron
           dest.name       = result["name"]
           loc = result["location"]
           dest.location   = loc.merge(
-            geo_address:  loc["address"].first + ", " + loc["postal_code"]
+            "geo_address" => loc["address"].first + ", " + loc["postal_code"],
+            "distance"    => result["distance"]
           )
           dest.categories = result["categories"].map(&:last)
           dest.source     = "yelp"

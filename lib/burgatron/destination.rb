@@ -23,6 +23,10 @@ module Burgatron
       end
     end
 
+    def distance # in meters
+      location["distance"] ? location["distance"].to_f : Float::INFINITY
+    end
+
   end
 
   Categories = {
