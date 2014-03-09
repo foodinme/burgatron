@@ -47,7 +47,9 @@ module Burgatron
             geo_address:  "#{loc["address"]}, #{loc["postalCode"]}",
             geo_location: "#{loc["lat"]},#{loc["lng"]}"
           )
-          dest.categories = Burgatron::Categories.expand_all *result["categories"].map{|cat| CategoryMapping[cat["shortName"]] }
+          dest.categories = result["categories"].map{|cat|
+            CategoryMapping[cat["shortName"]]
+          }
           dest.source     = "foursquare"
           dest.source_details = {}
         end

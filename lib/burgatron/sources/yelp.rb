@@ -36,7 +36,7 @@ module Burgatron
           dest.location   = loc.merge(
             geo_address:  loc["address"].first + ", " + loc["postal_code"]
           )
-          dest.categories = Burgatron::Categories.expand_all *result["categories"].map(&:last)
+          dest.categories = result["categories"].map(&:last)
           dest.source     = "yelp"
           dest.source_details = {
             "url"          => result["mobile_url"],
@@ -49,7 +49,8 @@ module Burgatron
       def request(opts)
         ::Yelp::V2::Search::Request::GeoPoint.new opts.merge(
           compress_response: false,
-          category_filter: %w[restaurants]
+          category_filter: %w[restaurants],
+          radius_filter: 1000
         )
       end
 

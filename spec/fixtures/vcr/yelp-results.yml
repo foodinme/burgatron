@@ -2,36 +2,38 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.yelp.com/v2/search?category_filter=restaurants&limit=20&ll=45.50462,-122.654206
+    uri: http://api.yelp.com/v2/search?category_filter=restaurants&limit=20&ll=45.50462,-122.654206&radius_filter=1000
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - ! '*/*'
+      - '*/*'
       User-Agent:
       - OAuth gem v0.4.7
       Authorization:
-      - OAuth oauth_consumer_key="<CONSUMER_KEY>", oauth_nonce="sKgpMGby6lH90jtyNkvYb0De5o0H2ltYxjKBV5aA",
-        oauth_signature="Ks03tH%2BLM%2F9eraMpQAlnMfXHukM%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1393703617", oauth_token="<TOKEN>", oauth_version="1.0"
+      - OAuth oauth_consumer_key="<CONSUMER_KEY>", oauth_nonce="XNqE9ncs9cTptE2LTGf9NbNGWq2DlpEWjyqlc4JILw",
+        oauth_signature="P9ILS4oMKXwaFiTMTCp7reEO0DM%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1394325959", oauth_token="<TOKEN>", oauth_version="1.0"
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 01 Mar 2014 19:54:07 GMT
+      - Sun, 09 Mar 2014 00:46:00 GMT
       Server:
       - Apache
       X-Node:
-      - web64-r1-sfo1, api_com
+      - web33, api_com
       Cache-Control:
       - private
       Set-Cookie:
-      - bse=45df88fda3cdfe374c718422948a6ef9; Domain=.yelp.com; Path=/; HttpOnly
+      - bse=26e6c34e54376c3de9ae338d617acc26; Domain=.yelp.com; Path=/; HttpOnly
       Content-Length:
-      - '29103'
+      - '28996'
       Vary:
       - User-Agent
       Content-Type:
@@ -41,13 +43,13 @@ http_interactions:
       X-Proxied:
       - lb1
     body:
-      encoding: US-ASCII
-      string: ! '{"region": {"span": {"latitude_delta": 0.015686549999998078, "longitude_delta":
-        0.014784506732581804}, "center": {"latitude": 45.505246749999998, "longitude":
-        -122.65154823033299}}, "total": 205, "businesses": [{"is_claimed": false,
-        "distance": 49.83574414722581, "mobile_url": "http://m.yelp.com/biz/ford-food-and-drink-portland",
+      encoding: UTF-8
+      string: '{"region": {"span": {"latitude_delta": 0.015686549999998078, "longitude_delta":
+        0.01160323999999946}, "center": {"latitude": 45.505246749999998, "longitude":
+        -122.6534719}}, "total": 59, "businesses": [{"is_claimed": false, "distance":
+        49.83574414722581, "mobile_url": "http://m.yelp.com/biz/ford-food-and-drink-portland",
         "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 64, "name": "Ford Food and Drink", "snippet_image_url": "http://s3-media1.ak.yelpcdn.com/photo/3OvSnTfe5k-NO46Wpo9egA/ms.jpg",
+        "review_count": 65, "name": "Ford Food and Drink", "snippet_image_url": "http://s3-media1.ak.yelpcdn.com/photo/3OvSnTfe5k-NO46Wpo9egA/ms.jpg",
         "rating": 4.0, "url": "http://www.yelp.com/biz/ford-food-and-drink-portland",
         "location": {"city": "Portland", "display_address": ["SE 11th \u0026 SE Division",
         "Hosford-Abernathy", "Portland, OR 97202"], "neighborhoods": ["Hosford-Abernathy",
@@ -55,30 +57,31 @@ http_interactions:
         "US", "address": ["SE 11th \u0026 SE Division"], "state_code": "OR"}, "phone":
         "5032363023", "snippet_text": "Breakfast Feb 20\nWould like to give this a
         3.5 Star Rating\nWhat I loved:  Egg in a Frame, homemade wheat bread used
-        in Egg in a Frame was incredible (Yes...", "image_url": "http://s3-media4.ak.yelpcdn.com/bphoto/4KVJ0oipdS8D136HkO2YMA/ms.jpg",
+        in Egg in a Frame was incredible (Yes...", "image_url": "http://s3-media1.ak.yelpcdn.com/bphoto/gXg1WYd7OanEKmKBhmLXPQ/ms.jpg",
         "categories": [["Diners", "diners"], ["Coffee \u0026 Tea", "coffee"]], "display_phone":
         "+1-503-236-3023", "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "id": "ford-food-and-drink-portland", "is_closed": false, "rating_img_url_small":
         "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
         {"is_claimed": true, "distance": 112.57057715414743, "mobile_url": "http://m.yelp.com/biz/portobello-vegan-trattoria-portland",
         "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 319, "name": "Portobello Vegan Trattoria", "snippet_image_url":
-        "http://s3-media2.ak.yelpcdn.com/photo/VnPwflkaqeGd5nQVHpyP3Q/ms.jpg", "rating":
+        "review_count": 321, "name": "Portobello Vegan Trattoria", "snippet_image_url":
+        "http://s3-media2.ak.yelpcdn.com/photo/sjeghoiT-_GOmutc6sJx3w/ms.jpg", "rating":
         4.0, "url": "http://www.yelp.com/biz/portobello-vegan-trattoria-portland",
         "location": {"city": "Portland", "display_address": ["1125 SE Division St",
         "Hosford-Abernathy", "Portland, OR 97202"], "neighborhoods": ["Hosford-Abernathy",
         "Southeast Portland", "Central Eastside"], "postal_code": "97202", "country_code":
         "US", "address": ["1125 SE Division St"], "state_code": "OR"}, "menu_date_updated":
-        1387661091, "phone": "5037545993", "snippet_text": "This place made me like
-        mushrooms. MUSHROOMS. I hate mushrooms, I think they taste like dolphin flesh.
-        And yet, Portobello had me going back for more. That...", "image_url": "http://s3-media2.ak.yelpcdn.com/bphoto/_yCSRqLhzdAaaCHeaToiyQ/ms.jpg",
-        "categories": [["Italian", "italian"], ["Vegan", "vegan"]], "display_phone":
-        "+1-503-754-5993", "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        1387661091, "phone": "5037545993", "snippet_text": "I''ve been here plenty
+        of times now and I''ve never had a bad experience. \nThis is the place to
+        go when visiting Portland (hey, Alan Alda did at the beginning...", "image_url":
+        "http://s3-media4.ak.yelpcdn.com/bphoto/pr-a6vdhHIRreoBaUhti4A/ms.jpg", "categories":
+        [["Italian", "italian"], ["Vegan", "vegan"]], "display_phone": "+1-503-754-5993",
+        "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "menu_provider": "single_platform", "id": "portobello-vegan-trattoria-portland",
         "is_closed": false, "rating_img_url_small": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
         {"is_claimed": true, "distance": 114.22726518845711, "mobile_url": "http://m.yelp.com/biz/double-dragon-portland-2",
         "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 139, "name": "Double Dragon", "snippet_image_url": "http://s3-media4.ak.yelpcdn.com/photo/TFU_gNHMzgaO5kcCB8WDhg/ms.jpg",
+        "review_count": 143, "name": "Double Dragon", "snippet_image_url": "http://s3-media4.ak.yelpcdn.com/photo/TFU_gNHMzgaO5kcCB8WDhg/ms.jpg",
         "rating": 4.0, "url": "http://www.yelp.com/biz/double-dragon-portland-2",
         "location": {"city": "Portland", "display_address": ["1235 SE Division St",
         "Ladd''s Addition", "Portland, OR 97214"], "neighborhoods": ["Ladd''s Addition",
@@ -94,7 +97,7 @@ http_interactions:
         "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
         {"is_claimed": true, "distance": 59.436783655585081, "mobile_url": "http://m.yelp.com/biz/taqueria-los-gorditos-portland-3",
         "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 246, "name": "Taqueria Los Gorditos", "snippet_image_url":
+        "review_count": 248, "name": "Taqueria Los Gorditos", "snippet_image_url":
         "http://s3-media2.ak.yelpcdn.com/photo/DAX404AixwsEE2k-jEqMDg/ms.jpg", "rating":
         4.0, "url": "http://www.yelp.com/biz/taqueria-los-gorditos-portland-3", "location":
         {"city": "Portland", "display_address": ["1212 SE Division St", "Hosford-Abernathy",
@@ -103,22 +106,22 @@ http_interactions:
         St"], "state_code": "OR"}, "phone": "5034456289", "snippet_text": "Alternate
         names for Los Gorditos include:\n\nWe Own Stock in Salt Futures, If We Do
         It Inconsistently Enough Does it Become Consistent Again? Add Three...", "image_url":
-        "http://s3-media1.ak.yelpcdn.com/bphoto/7HXR7VxpPrpTZaV_-xdT8w/ms.jpg", "categories":
+        "http://s3-media2.ak.yelpcdn.com/bphoto/1i2uDWrQSXTnnoZ6r_QZYg/ms.jpg", "categories":
         [["Mexican", "mexican"]], "display_phone": "+1-503-445-6289", "rating_img_url_large":
         "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "id": "taqueria-los-gorditos-portland-3", "is_closed": false, "rating_img_url_small":
         "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
         {"is_claimed": true, "distance": 51.352352101629478, "mobile_url": "http://m.yelp.com/biz/genies-cafe-portland",
         "rating_img_url": "http://s3-media1.ak.yelpcdn.com/assets/2/www/img/5ef3eb3cb162/ico/stars/v1/stars_3_half.png",
-        "review_count": 265, "name": "Genies Cafe", "snippet_image_url": "http://s3-media3.ak.yelpcdn.com/photo/PRRLdipB5qthQSuITnXmUw/ms.jpg",
+        "review_count": 266, "name": "Genies Cafe", "snippet_image_url": "http://s3-media1.ak.yelpcdn.com/photo/C5r4xFClKmWHhgDwx_o9jw/ms.jpg",
         "rating": 3.5, "url": "http://www.yelp.com/biz/genies-cafe-portland", "location":
         {"city": "Portland", "display_address": ["1101 SE Division St", "Hosford-Abernathy",
         "Portland, OR 97202"], "neighborhoods": ["Hosford-Abernathy", "Southeast Portland",
         "Central Eastside"], "postal_code": "97202", "country_code": "US", "address":
-        ["1101 SE Division St"], "state_code": "OR"}, "menu_date_updated": 1393608276,
-        "phone": "5034459777", "snippet_text": "Love Genies Cafe!...the best Bloody
-        Mary selection in town...several infused vodkas provide a custom tailored
-        level of kick!...the service and food are...", "image_url": "http://s3-media1.ak.yelpcdn.com/bphoto/bE8Zr55cbjdaWSkUQ0Agmg/ms.jpg",
+        ["1101 SE Division St"], "state_code": "OR"}, "menu_date_updated": 1394046975,
+        "phone": "5034459777", "snippet_text": "Just have to say I am not buying all
+        the one and two star reviews. It seems there are a lot of Portland hipsters
+        you just can''t please!  Anyways, my wife...", "image_url": "http://s3-media1.ak.yelpcdn.com/bphoto/bE8Zr55cbjdaWSkUQ0Agmg/ms.jpg",
         "categories": [["American (New)", "newamerican"], ["Breakfast \u0026 Brunch",
         "breakfast_brunch"]], "display_phone": "+1-503-445-9777", "rating_img_url_large":
         "http://s3-media3.ak.yelpcdn.com/assets/2/www/img/bd9b7a815d1b/ico/stars/v1/stars_large_3_half.png",
@@ -141,7 +144,7 @@ http_interactions:
         "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"},
         {"is_claimed": true, "distance": 345.62533076488728, "mobile_url": "http://m.yelp.com/biz/aprisa-mexican-cuisine-portland",
         "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 101, "name": "Aprisa Mexican Cuisine", "snippet_image_url":
+        "review_count": 102, "name": "Aprisa Mexican Cuisine", "snippet_image_url":
         "http://s3-media2.ak.yelpcdn.com/photo/Ft6Clfs0ulPG8N81Y2j66Q/ms.jpg", "rating":
         4.0, "url": "http://www.yelp.com/biz/aprisa-mexican-cuisine-portland", "location":
         {"city": "Portland", "display_address": ["2311 SE 8th Ave", "Hosford-Abernathy",
@@ -150,7 +153,7 @@ http_interactions:
         ["2311 SE 8th Ave"], "state_code": "OR"}, "phone": "5035059006", "snippet_text":
         "A great burrito in Portland is surprisingly difficult to find, especially
         within city limits. I was hesitant at first with the drive-thru, but I''m
-        glad I...", "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/wlFQ1J-Hb0palcYdHEdzOw/ms.jpg",
+        glad I...", "image_url": "http://s3-media2.ak.yelpcdn.com/bphoto/4MjpCoqU5_kpvRE2HAqrag/ms.jpg",
         "categories": [["Mexican", "mexican"]], "display_phone": "+1-503-505-9006",
         "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "id": "aprisa-mexican-cuisine-portland", "is_closed": false, "rating_img_url_small":
@@ -171,10 +174,10 @@ http_interactions:
         "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "id": "edelweiss-sausage-and-delicatessen-portland", "is_closed": false, "rating_img_url_small":
         "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
-        {"is_claimed": false, "distance": 754.42885963488527, "mobile_url": "http://m.yelp.com/biz/teote-areperia-portland",
+        {"is_claimed": false, "distance": 754.42885963488527, "mobile_url": "http://m.yelp.com/biz/teote-portland",
         "rating_img_url": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
-        "review_count": 65, "name": "Teote Areperia", "snippet_image_url": "http://s3-media1.ak.yelpcdn.com/photo/NOPUXTd9g3x88QeIY_LUfQ/ms.jpg",
-        "rating": 4.5, "url": "http://www.yelp.com/biz/teote-areperia-portland", "location":
+        "review_count": 68, "name": "Teote", "snippet_image_url": "http://s3-media1.ak.yelpcdn.com/photo/NOPUXTd9g3x88QeIY_LUfQ/ms.jpg",
+        "rating": 4.5, "url": "http://www.yelp.com/biz/teote-portland", "location":
         {"city": "Portland", "display_address": ["1615 SE 12th Ave", "Hosford-Abernathy",
         "Portland, OR 97214"], "neighborhoods": ["Hosford-Abernathy", "Southeast Portland",
         "Central Eastside"], "postal_code": "97214", "country_code": "US", "address":
@@ -185,11 +188,10 @@ http_interactions:
         "categories": [["Latin American", "latin"], ["Gluten-Free", "gluten_free"],
         ["Argentine", "argentine"]], "display_phone": "+1-971-888-5281", "rating_img_url_large":
         "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
-        "id": "teote-areperia-portland", "is_closed": false, "rating_img_url_small":
-        "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"},
+        "id": "teote-portland", "is_closed": false, "rating_img_url_small": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"},
         {"is_claimed": false, "distance": 723.5511346863301, "mobile_url": "http://m.yelp.com/biz/these-guys-brooklyn-portland-2",
         "rating_img_url": "http://s3-media1.ak.yelpcdn.com/assets/2/www/img/f1def11e4e79/ico/stars/v1/stars_5.png",
-        "review_count": 14, "name": "These Guys Brooklyn", "snippet_image_url": "http://s3-media3.ak.yelpcdn.com/photo/TD1vkOg9gCFryDzwRWYTpg/ms.jpg",
+        "review_count": 15, "name": "These Guys Brooklyn", "snippet_image_url": "http://s3-media3.ak.yelpcdn.com/photo/TD1vkOg9gCFryDzwRWYTpg/ms.jpg",
         "rating": 5.0, "url": "http://www.yelp.com/biz/these-guys-brooklyn-portland-2",
         "location": {"city": "Portland", "display_address": ["3400 1/2  SE Milwaukie
         Ave", "Brooklyn", "Portland, OR 97202"], "neighborhoods": ["Brooklyn", "Southeast
@@ -197,31 +199,15 @@ http_interactions:
         1/2  SE Milwaukie Ave"], "state_code": "OR"}, "phone": "5032347772", "snippet_text":
         "Another winner here in lonely Brooklyn!  I''ve seen this little cart go from
         barely seen to  full on patronage now and they deserve it.  I went by for
-        the...", "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/iQVmM793t9_i_Whl9uvx5Q/ms.jpg",
+        the...", "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/OmwlVkEnrRP4hiI97oLcFQ/ms.jpg",
         "categories": [["American (Traditional)", "tradamerican"], ["Barbeque", "bbq"],
         ["Food Trucks", "foodtrucks"]], "display_phone": "+1-503-234-7772", "rating_img_url_large":
         "http://s3-media3.ak.yelpcdn.com/assets/2/www/img/22affc4e6c38/ico/stars/v1/stars_large_5.png",
         "id": "these-guys-brooklyn-portland-2", "is_closed": false, "rating_img_url_small":
         "http://s3-media1.ak.yelpcdn.com/assets/2/www/img/c7623205d5cd/ico/stars/v1/stars_small_5.png"},
-        {"is_claimed": true, "distance": 981.42053637867355, "mobile_url": "http://m.yelp.com/biz/devils-dill-sandwich-shop-portland",
-        "rating_img_url": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
-        "review_count": 68, "name": "Devil''s Dill Sandwich Shop", "snippet_image_url":
-        "http://s3-media4.ak.yelpcdn.com/photo/TFU_gNHMzgaO5kcCB8WDhg/ms.jpg", "rating":
-        4.5, "url": "http://www.yelp.com/biz/devils-dill-sandwich-shop-portland",
-        "location": {"city": "Portland", "display_address": ["1711 SE Hawthorne Blvd.",
-        "Buckman", "Portland, OR 97214"], "neighborhoods": ["Buckman", "Southeast
-        Portland"], "postal_code": "97214", "country_code": "US", "address": ["1711
-        SE Hawthorne Blvd."], "state_code": "OR"}, "phone": "5032368067", "snippet_text":
-        "Let''s get down to it.\n\nThis place is great. It started when I had the
-        braised beef sandwich. It was fat and tasty. It was good enough that I went
-        the next...", "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/ZUXkYuqVzUSriUicceia6Q/ms.jpg",
-        "categories": [["Sandwiches", "sandwiches"]], "display_phone": "+1-503-236-8067",
-        "rating_img_url_large": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
-        "id": "devils-dill-sandwich-shop-portland", "is_closed": false, "rating_img_url_small":
-        "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"},
         {"is_claimed": true, "distance": 433.32098429145833, "mobile_url": "http://m.yelp.com/biz/southeast-grind-portland",
         "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 108, "name": "Southeast Grind", "snippet_image_url": "http://s3-media2.ak.yelpcdn.com/photo/HRQjJagWN8rTTC_W1MnBKQ/ms.jpg",
+        "review_count": 109, "name": "Southeast Grind", "snippet_image_url": "http://s3-media2.ak.yelpcdn.com/photo/HRQjJagWN8rTTC_W1MnBKQ/ms.jpg",
         "rating": 4.0, "url": "http://www.yelp.com/biz/southeast-grind-portland",
         "location": {"city": "Portland", "display_address": ["1223 SE Powell Blvd",
         "Hosford-Abernathy", "Portland, OR 97202"], "neighborhoods": ["Hosford-Abernathy",
@@ -229,40 +215,28 @@ http_interactions:
         ["1223 SE Powell Blvd"], "state_code": "OR"}, "menu_date_updated": 1390509350,
         "phone": "5034738703", "snippet_text": "Great central city location.\nGood
         food.\nOpen 24 hours.\n\nLacking in parking and class but good at home feeing
-        place to meet.", "image_url": "http://s3-media4.ak.yelpcdn.com/bphoto/omU6Z7I5E41i1vRh-04ABQ/ms.jpg",
+        place to meet.", "image_url": "http://s3-media4.ak.yelpcdn.com/bphoto/-4Vb0aHMmPRhyps1iTKlEw/ms.jpg",
         "categories": [["Vegan", "vegan"], ["Vegetarian", "vegetarian"], ["Coffee
         \u0026 Tea", "coffee"]], "display_phone": "+1-503-473-8703", "rating_img_url_large":
         "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "menu_provider": "single_platform", "id": "southeast-grind-portland", "is_closed":
         false, "rating_img_url_small": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
-        {"is_claimed": true, "distance": 846.96821205693391, "mobile_url": "http://m.yelp.com/biz/sip-portland",
+        {"is_claimed": true, "distance": 981.42053637867355, "mobile_url": "http://m.yelp.com/biz/devils-dill-sandwich-shop-portland",
         "rating_img_url": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
-        "review_count": 76, "name": "Sip", "snippet_image_url": "http://s3-media1.ak.yelpcdn.com/photo/6iccAITsV3TVGuBBagpkCQ/ms.jpg",
-        "rating": 4.5, "url": "http://www.yelp.com/biz/sip-portland", "location":
-        {"city": "Portland", "display_address": ["3029 SE 21st Ave", "Hosford-Abernathy",
-        "Portland, OR 97202"], "neighborhoods": ["Hosford-Abernathy", "Clinton", "Southeast
-        Portland"], "postal_code": "97202", "country_code": "US", "address": ["3029
-        SE 21st Ave"], "state_code": "OR"}, "phone": "5039640820", "snippet_text":
-        "Healthy, original selection. Nice variety, and very generous with the portions
-        of each ingredient. Not watered down with the fruits and veggies that produce...",
-        "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/00uu0IUx74h14BP4fNH2AA/ms.jpg",
-        "categories": [["Food Stands", "foodstands"], ["Juice Bars \u0026 Smoothies",
-        "juicebars"]], "display_phone": "+1-503-964-0820", "rating_img_url_large":
-        "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
-        "id": "sip-portland", "is_closed": false, "rating_img_url_small": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"},
-        {"is_claimed": true, "distance": 495.61821923369257, "mobile_url": "http://m.yelp.com/biz/sanborns-portland",
-        "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 187, "name": "Sanborn''s", "snippet_image_url": "http://s3-media4.ak.yelpcdn.com/photo/TFU_gNHMzgaO5kcCB8WDhg/ms.jpg",
-        "rating": 4.0, "url": "http://www.yelp.com/biz/sanborns-portland", "location":
-        {"city": "Portland", "display_address": ["3200 SE Milwaukie Ave", "Brooklyn",
-        "Portland, OR 97202"], "neighborhoods": ["Brooklyn", "Southeast Portland"],
-        "postal_code": "97202", "country_code": "US", "address": ["3200 SE Milwaukie
-        Ave"], "state_code": "OR"}, "phone": "5039638000", "snippet_text": "Lets get
-        down to it.\n\nGreat breakfast. Not very greasy, which I liked. Everything
-        was excellent. Look at the pictures!", "image_url": "http://s3-media2.ak.yelpcdn.com/bphoto/vBUU2sKHUh5ADMGXNAlgeA/ms.jpg",
-        "categories": [["Breakfast \u0026 Brunch", "breakfast_brunch"]], "display_phone":
-        "+1-503-963-8000", "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
-        "id": "sanborns-portland", "is_closed": false, "rating_img_url_small": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        "review_count": 69, "name": "Devil''s Dill Sandwich Shop", "snippet_image_url":
+        "http://s3-media1.ak.yelpcdn.com/photo/9O5FmYfqaNmCpwcTpThU1Q/ms.jpg", "rating":
+        4.5, "url": "http://www.yelp.com/biz/devils-dill-sandwich-shop-portland",
+        "location": {"city": "Portland", "display_address": ["1711 SE Hawthorne Blvd.",
+        "Buckman", "Portland, OR 97214"], "neighborhoods": ["Buckman", "Southeast
+        Portland"], "postal_code": "97214", "country_code": "US", "address": ["1711
+        SE Hawthorne Blvd."], "state_code": "OR"}, "phone": "5032368067", "snippet_text":
+        "Still going strong with their combination of protein, spread, and bread.
+        One of the best in Portland. There are no bad choices here. Read the menu
+        and just...", "image_url": "http://s3-media1.ak.yelpcdn.com/bphoto/t0YSXMM8nb_qbRtrmp2IEg/ms.jpg",
+        "categories": [["Sandwiches", "sandwiches"]], "display_phone": "+1-503-236-8067",
+        "rating_img_url_large": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png",
+        "id": "devils-dill-sandwich-shop-portland", "is_closed": false, "rating_img_url_small":
+        "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png"},
         {"is_claimed": true, "distance": 618.7803089534176, "mobile_url": "http://m.yelp.com/biz/juniors-cafe-portland",
         "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
         "review_count": 170, "name": "Juniors Cafe", "snippet_image_url": "http://s3-media4.ak.yelpcdn.com/photo/KJs1nq0xMi7no-lZElsqzw/ms.jpg",
@@ -273,11 +247,24 @@ http_interactions:
         ["1742 SE 12th Ave"], "state_code": "OR"}, "phone": "5034674971", "snippet_text":
         "This is a great little place.  My wife is Vegan and I am very much not that.  This
         place is great because we both get what we want.\n\nThe decor is pleasing....",
-        "image_url": "http://s3-media4.ak.yelpcdn.com/bphoto/VJdMp8IBzRI5SSSoCeb97g/ms.jpg",
+        "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/m3x0afhDncohPHf1c-2Avw/ms.jpg",
         "categories": [["Vegetarian", "vegetarian"], ["Breakfast \u0026 Brunch", "breakfast_brunch"]],
         "display_phone": "+1-503-467-4971", "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "id": "juniors-cafe-portland", "is_closed": false, "rating_img_url_small":
         "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 495.61821923369257, "mobile_url": "http://m.yelp.com/biz/sanborns-portland",
+        "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 188, "name": "Sanborn''s", "snippet_image_url": "http://s3-media4.ak.yelpcdn.com/photo/TFU_gNHMzgaO5kcCB8WDhg/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/sanborns-portland", "location":
+        {"city": "Portland", "display_address": ["3200 SE Milwaukie Ave", "Brooklyn",
+        "Portland, OR 97202"], "neighborhoods": ["Brooklyn", "Southeast Portland"],
+        "postal_code": "97202", "country_code": "US", "address": ["3200 SE Milwaukie
+        Ave"], "state_code": "OR"}, "phone": "5039638000", "snippet_text": "Lets get
+        down to it.\n\nGreat breakfast. Not very greasy, which I liked. Everything
+        was excellent. Look at the pictures!", "image_url": "http://s3-media2.ak.yelpcdn.com/bphoto/vBUU2sKHUh5ADMGXNAlgeA/ms.jpg",
+        "categories": [["Breakfast \u0026 Brunch", "breakfast_brunch"]], "display_phone":
+        "+1-503-963-8000", "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "sanborns-portland", "is_closed": false, "rating_img_url_small": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
         {"is_claimed": false, "distance": 51.352352101629478, "mobile_url": "http://m.yelp.com/biz/gracies-cafe-portland",
         "rating_img_url": "http://s3-media1.ak.yelpcdn.com/assets/2/www/img/f1def11e4e79/ico/stars/v1/stars_5.png",
         "review_count": 1, "name": "Gracie''s Cafe", "snippet_image_url": "http://s3-media1.ak.yelpcdn.com/photo/rtykgAe3cXao_PuzgT8mPA/ms.jpg",
@@ -301,14 +288,14 @@ http_interactions:
         Ave"], "state_code": "OR"}, "phone": "5032331994", "snippet_text": "Because
         we don''t frequent the bar scene, it never has occurred to us to dine at The
         Lamp, the lounge/restaurant imbedded into the Aladdin Theater.\n\nWe were...",
-        "image_url": "http://s3-media2.ak.yelpcdn.com/bphoto/SAmj9j5iqYcVg-0RqDqErw/ms.jpg",
+        "image_url": "http://s3-media4.ak.yelpcdn.com/bphoto/2Q9RsIbXPwm91yzHdYFuyQ/ms.jpg",
         "categories": [["American (New)", "newamerican"], ["Salad", "salad"], ["Sandwiches",
         "sandwiches"]], "display_phone": "+1-503-233-1994", "rating_img_url_large":
         "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "id": "the-lamp-portland", "is_closed": false, "rating_img_url_small": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
         {"is_claimed": true, "distance": 472.98171262337269, "mobile_url": "http://m.yelp.com/biz/brooklyn-house-restaurant-portland",
         "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 24, "name": "Brooklyn House Restaurant", "snippet_image_url":
+        "review_count": 26, "name": "Brooklyn House Restaurant", "snippet_image_url":
         "http://s3-media3.ak.yelpcdn.com/photo/wYXTZ3KKKppKdpPiySYnFg/ms.jpg", "rating":
         4.0, "url": "http://www.yelp.com/biz/brooklyn-house-restaurant-portland",
         "location": {"city": "Portland", "display_address": ["3131 SE 12th Ave", "Brooklyn",
@@ -323,24 +310,9 @@ http_interactions:
         "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "menu_provider": "single_platform", "id": "brooklyn-house-restaurant-portland",
         "is_closed": false, "rating_img_url_small": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
-        {"is_claimed": true, "distance": 976.81412505720311, "mobile_url": "http://m.yelp.com/biz/castagna-restaurant-portland",
-        "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 100, "name": "Castagna Restaurant", "snippet_image_url": "http://s3-media4.ak.yelpcdn.com/photo/B2ak7w8BNQqUqMJirBV8jQ/ms.jpg",
-        "rating": 4.0, "url": "http://www.yelp.com/biz/castagna-restaurant-portland",
-        "location": {"city": "Portland", "display_address": ["1752 SE Hawthorne Blvd",
-        "Ladd''s Addition", "Portland, OR 97214"], "neighborhoods": ["Ladd''s Addition",
-        "Hosford-Abernathy", "Southeast Portland"], "postal_code": "97214", "country_code":
-        "US", "address": ["1752 SE Hawthorne Blvd"], "state_code": "OR"}, "menu_date_updated":
-        1387494919, "phone": "5032317373", "snippet_text": "Long overdue review from
-        Nicole L and my trip to Portland in May. Really glad that we tried this place.
-        \n\nPrix Fixe menu for $55:\nSnacks: \n*Buckwheat egg...", "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/XmH_fmU5ogE4bSnbKgIWPg/ms.jpg",
-        "categories": [["American (New)", "newamerican"]], "display_phone": "+1-503-231-7373",
-        "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
-        "menu_provider": "single_platform", "id": "castagna-restaurant-portland",
-        "is_closed": false, "rating_img_url_small": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
         {"is_claimed": true, "distance": 496.00163751008131, "mobile_url": "http://m.yelp.com/biz/harvester-brewing-portland",
         "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
-        "review_count": 12, "name": "Harvester Brewing", "snippet_image_url": "http://s3-media2.ak.yelpcdn.com/photo/iG1TPmn7K84Y9PNWzEi12Q/ms.jpg",
+        "review_count": 13, "name": "Harvester Brewing", "snippet_image_url": "http://s3-media2.ak.yelpcdn.com/photo/iG1TPmn7K84Y9PNWzEi12Q/ms.jpg",
         "rating": 4.0, "url": "http://www.yelp.com/biz/harvester-brewing-portland",
         "location": {"city": "Portland", "display_address": ["2030 SE 7th Ave", "Hosford-Abernathy",
         "Portland, OR 97214"], "neighborhoods": ["Hosford-Abernathy", "Southeast Portland",
@@ -348,12 +320,41 @@ http_interactions:
         ["2030 SE 7th Ave"], "state_code": "OR"}, "phone": "5039284195", "snippet_text":
         "Great, great beer \u0026 great people.....\n\nI''m not a gluten free person,
         but regardless of what they make the beer out of it is tasty.\n\nThey also
-        make a really...", "image_url": "http://s3-media3.ak.yelpcdn.com/bphoto/oLX0HiwTSFRCMif8CCCTKQ/ms.jpg",
+        make a really...", "image_url": "http://s3-media2.ak.yelpcdn.com/bphoto/VsG6jF4i7b-UXfozK1uYEQ/ms.jpg",
         "categories": [["Gluten-Free", "gluten_free"], ["American (New)", "newamerican"],
         ["Breweries", "breweries"]], "display_phone": "+1-503-928-4195", "rating_img_url_large":
         "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
         "id": "harvester-brewing-portland", "is_closed": false, "rating_img_url_small":
+        "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": true, "distance": 846.26465868821742, "mobile_url": "http://m.yelp.com/biz/pyro-pizza-portland",
+        "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 195, "name": "Pyro Pizza", "snippet_image_url": "http://s3-media4.ak.yelpcdn.com/photo/wwgCfNocxfCdVr-f95KaPg/ms.jpg",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/pyro-pizza-portland", "location":
+        {"city": "Portland", "display_address": ["SE 12th and Hawthorne", "Hosford-Abernathy",
+        "Portland, OR 97214"], "neighborhoods": ["Hosford-Abernathy", "Southeast Portland",
+        "Central Eastside"], "postal_code": "97214", "country_code": "US", "address":
+        ["SE 12th and Hawthorne"], "state_code": "OR"}, "phone": "5039291404", "snippet_text":
+        "Believe the hype.\n\nI ordered the margherita. The amount of deliciousness
+        I received for $7 + a tip (always tip!) was amazing. The crust was soft and
+        doughy...", "image_url": "http://s3-media4.ak.yelpcdn.com/bphoto/MxIz4_hmWg2gNBtkBoy9UQ/ms.jpg",
+        "categories": [["Pizza", "pizza"], ["Food Stands", "foodstands"]], "display_phone":
+        "+1-503-929-1404", "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "pyro-pizza-portland", "is_closed": false, "rating_img_url_small": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"},
+        {"is_claimed": false, "distance": 412.59580103344916, "mobile_url": "http://m.yelp.com/biz/taqueria-pardos-portland",
+        "rating_img_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 5, "name": "Taqueria Pardos", "snippet_image_url": "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/cc4afe21892e/default_avatars/user_medium_square.png",
+        "rating": 4.0, "url": "http://www.yelp.com/biz/taqueria-pardos-portland",
+        "location": {"city": "Portland", "display_address": ["SE Sherman St \u0026
+        7th Ave", "Hosford-Abernathy", "Portland, OR 97214"], "neighborhoods": ["Hosford-Abernathy",
+        "Southeast Portland", "Central Eastside"], "postal_code": "97214", "country_code":
+        "US", "address": ["SE Sherman St \u0026 7th Ave"], "state_code": "OR"}, "phone":
+        "5035555555", "snippet_text": "This cart has the BEST tacos in Portland.  They
+        are $1 each!  They are delicious and it''s run by friendly folks.  \n\nHours
+        are 11-3 M-F", "image_url": "http://s3-media4.ak.yelpcdn.com/bphoto/4GVuO4Rvut2TJqpTgUh4qw/ms.jpg",
+        "categories": [["Mexican", "mexican"]], "display_phone": "+1-503-555-5555",
+        "rating_img_url_large": "http://s3-media2.ak.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "id": "taqueria-pardos-portland", "is_closed": false, "rating_img_url_small":
         "http://s3-media4.ak.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png"}]}'
     http_version: 
-  recorded_at: Sat, 01 Mar 2014 19:53:37 GMT
-recorded_with: VCR 2.2.4
+  recorded_at: Sun, 09 Mar 2014 00:46:00 GMT
+recorded_with: VCR 2.8.0

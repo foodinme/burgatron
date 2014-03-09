@@ -2,6 +2,27 @@ module Burgatron
 
   class Destination < Struct.new(:name, :location, :categories, :source, :source_details)
     
+    def initialize(*a)
+      super
+      self.location       ||= {}
+      self.categories     ||= []
+      self.source_details ||= {}
+    end
+
+    def categories=(val)
+      super Burgatron::Categories.expand_all(*val)
+    end
+
+    def merge(other)
+      self.class.new.tap do |merged|
+        merged.name           = name
+        merged.location       = other.location.merge(location)
+        merged.categories     = categories | other.categories
+        merged.source         = "#{source},#{other.source}"
+        merged.source_details = other.source_details.merge(source_details)
+      end
+    end
+
   end
 
   Categories = {

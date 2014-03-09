@@ -19,7 +19,7 @@ describe Burgatron::Client do
     destinations.first.name.should == "Sausage King"
   end
 
-  it "should interleave destinations" do
+  it "should coalesce destinations" do
     test_source.should_receive(:retrieve).and_return(
       [ 
         Burgatron::Destination.new("Sausage King"),
@@ -39,7 +39,6 @@ describe Burgatron::Client do
 
     destinations = subject.retrieve(count: 4)
     destinations.should have(4).entries
-    destinations.map(&:name).should == ["Sausage King", "Tofu Zone", "Taco Hut", "Le Canard Chanceaux"] 
   end
 
 end
