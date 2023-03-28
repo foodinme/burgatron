@@ -1,6 +1,12 @@
 require 'burgatron/destination'
 require 'pry'
 
+module YAML
+  class << self
+    alias_method :load, :unsafe_load
+  end
+end
+
 module Burgatron
   
   module Sources
